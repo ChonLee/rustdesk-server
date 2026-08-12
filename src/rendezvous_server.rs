@@ -1700,6 +1700,8 @@ fn get_symetric_key_from_msg(
             key_array
         }
         Err(e) => panic!("Error while opening the seal key{:?}", e),
+    }
+}
 
 #[cfg(test)]
 mod tests {
