@@ -41,6 +41,9 @@ jsonwebtoken = "8"
 headers = "0.3"
 once_cell = "1.8"
 sodiumoxide = "0.2"
+# vendored OpenSSL: upstream hbb_common pulls tokio-tungstenite 0.26 -> native-tls
+# -> openssl-sys, which cross containers cannot satisfy. Build it from source.
+openssl = { version = "0.10", features = ["vendored"] }
 tokio-tungstenite = "0.17"
 tungstenite = "0.17"
 regex = "1.4"
